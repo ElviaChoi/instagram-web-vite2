@@ -15,7 +15,7 @@ jobs:
       - name: Repository 파일 출력하기
         run: ls
 
-      - name: 빌드하기
+      - name: 빌드하기2
         run: npm run build
 
       - name: Debugging
