@@ -12,10 +12,15 @@ jobs:
       - name: Github Repository 파일 불러오기
         uses: actions/checkout@v4
 
-      - name: Repository 파일 출력하기
-        run: ls
+      - name: Node.js 환경 설정
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-      - name: 빌드하기2
+      - name: 의존성 설치
+        run: npm install
+
+      - name: 빌드하기
         run: npm run build
 
       - name: Debugging
